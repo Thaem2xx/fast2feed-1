@@ -12,32 +12,38 @@
                             <a href="{{ route('trangChuAdmin') }}">
                                 <i class="fas fa-tachometer-alt"></i>Trang chủ</a>
                         </li>
-                        <li>
-                            <a href="{{ route('userAdmin') }}">
-                                <i class="fas fa-align-justify"></i>Quản lý danh mục</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('userAdmin') }}">
-                                <i class="fas fa-warehouse"></i>Quản lý nhà hàng</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('userAdmin') }}">
-                                <i class="fas fa-utensils"></i>Quản lý sản phẩm</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('userAdmin') }}">
-                                <i class="fas fa-users"></i>Quản lý User</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('userAdmin') }}">
-                                <i class="fas fa-motorcycle"></i>Quản lý shipper</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('userAdmin') }}">
-                                <i class="far fa-address-book"></i>Quản lý liên hệ</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-        <!-- END MENU SIDEBAR-->
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-suitcase"></i>Quản lý</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="{{ route('userAdmin') }}">
+                                        <i class="fas fa-align-justify"></i>Danh mục</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userAdmin') }}">
+                                        <i class="fas fa-warehouse"></i>Nhà hàng</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userAdmin') }}">
+                                        <i class="fas fa-utensils"></i>Sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userAdmin') }}">
+                                        <i class="fas fa-users"></i>User</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userAdmin') }}">
+                                        <i class="fas fa-motorcycle"></i>Shipper</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userAdmin') }}">
+                                        <i class="far fa-address-book"></i>Liên hệ</a>
+                                </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+                <!-- END MENU SIDEBAR-->

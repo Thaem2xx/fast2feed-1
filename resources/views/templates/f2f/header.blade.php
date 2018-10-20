@@ -23,6 +23,7 @@
 		#bs-example-navbar-collapse-1 ul li {
 			position: relative;
 			list-style: none;
+			-webkit-transition: all .2s linear;
 		}
 		.sub-menu {
 			padding: 0px;
