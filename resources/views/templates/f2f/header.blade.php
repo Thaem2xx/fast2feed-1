@@ -60,6 +60,101 @@
 			margin-bottom: 15px;
 			margin-top: 15px;
 		}
+		/*id active*/
+		#active {
+			background-color: #DDDDDD;
+		}
+		/*gio hang*/
+		.giohang {
+			
+			padding:5px 10px;
+			border-bottom: 1px solid #EBEBEB;
+		}
+		/*dat-truoc*/
+		.dat-truoc {
+			width: 248px;
+			height: 35px;
+			border: 1px solid gray;
+			background-color: #CF2127;
+			border-radius: 4px;
+		}
+		.dat-truoc:hover {
+			background-color: #BB0000;
+		}
+		/*danh sách sản phẩm*/
+		.item {
+			margin-top: 30px;
+		}
+		.list-item {
+			border-bottom: 1px solid #F5F5F5;
+			margin-top: 10px;
+		}
+		.item-cat {
+			margin-bottom: 30px;
+		}
+		.item-cat h4 {
+			color: #6D6F79;
+		}
+		.img-item {
+			float: left;
+		}
+		.img-item img {
+			width: 60px;
+			height: 60px;
+		}
+		.name-item {
+			float: left;
+			margin-left: 20px
+		}
+		.name-item p {
+			color: #6D6F79;
+			font-size: 12px;
+		}
+		.price-item {
+			float: right;
+		}
+		.price-item span {
+			margin-right: 20px;
+			color: #0296DD;
+			font-weight: 700;
+			font-size: 17px;
+		}
+		/*clear float*/
+		.clear {
+			clear:both;
+		}
+		/*mã giảm giá*/
+		.discount {
+			width: 569px;
+			height: 100%;
+			border: 1px dashed #575757;
+			background-color: #FBF9D8;
+		}
+		.code-discount-img img {
+			display: block;
+			padding: 15px;
+		}
+		.code-discount-img {
+			float: left;
+
+		}
+		.code-discount-text {
+			padding:10px 90px;
+		}
+		.code-discount-text div p {
+			line-height: 10px;
+		}
+		.discount-text1 {
+			border-bottom: 1px solid #EBE9C9;
+		}
+		.discount-text2 {
+			margin-top: 10px;
+		}
+		/*star-rate*/
+		.star-rate {
+			display: inline;
+			color: #FFC107;
+		}
 	</style>
 </head>
 <body>
