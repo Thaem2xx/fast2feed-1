@@ -21,7 +21,7 @@
 						  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="font-family: Time New Roman;border-bottom: 1px solid #EEEEEE">
 						  		<span style="font-size: 14px"><a href="{{ route('trangChu') }}" title="">Trang chủ »</a><a href="" title="">EZI Coffee</a></span>
 						  		<p style="font-size: 12px;color: gray;margin-top: 15px">CAFÉ/DESSERT - MÓN VIỆT</p>
-						  		<h3><strong>EZI Coffee</strong></h2>
+						  		<h2><strong>EZI Coffee</strong></h2>
 						  		<p style="font-size: 14px;color: #464646">30 Ông Ích Khiêm, Q.Hải Châu, Đà nẵng</p>	
 						  		<i class="fa fa-circle" style="color: green"></i>&nbsp; <span style="font-family: Arial;font-size: 15px">Đang mở cửa</span><br>
 						  		<i class="fa fa-money" aria-hidden="true" style="color: gray;font-size: 16px"></i>&nbsp;<span style="color: gray;font-size: 16px;">12,000 - 39,000</span>
@@ -36,7 +36,7 @@
 					</div>
 				</div>
 			</div>
-			@include('templates.f2f.leftbar')
+			@include('templates.f2f.leftmenu')
 			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearpaddingr">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding">
 						<div class="panel panel-info">
