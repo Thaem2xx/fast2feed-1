@@ -17,15 +17,20 @@
                                 <i class="fas fa-suitcase"></i>Quản lý</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="{{ route('userAdmin') }}">
+                                    <a href="{{ route('catAdmin') }}">
                                         <i class="fas fa-align-justify"></i>Danh mục</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('userAdmin') }}">
-                                        <i class="fas fa-warehouse"></i>Nhà hàng</a>
+                                    <a href="{{ route('menuAdmin') }}">
+                                        <i class="fab fa-elementor"></i>Menu</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="{{ route('customerAdmin') }}">
+                                        <i class="fas fa-warehouse"></i>Customer</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('userAdmin') }}">
+                                    <a href="{{ route('productAdmin') }}">
                                         <i class="fas fa-utensils"></i>Sản phẩm</a>
                                 </li>
                                 <li>
@@ -37,8 +42,12 @@
                                         <i class="fas fa-motorcycle"></i>Shipper</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('userAdmin') }}">
+                                    <a href="{{ route('contactAdmin') }}">
                                         <i class="far fa-address-book"></i>Liên hệ</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('commentAdmin') }}">
+                                        <i class="fas fa-comments"></i>Bình luận</a>
                                 </li>
                                     </ul>
                                 </li>

@@ -61,4 +61,28 @@ Route::namespace('Admin')->group(function(){
 		'uses' => 'UserController@index',
 		'as' => 'userAdmin'
 	]);
+	Route::get('/admin/cat',[
+		'uses' => 'CatController@index',
+		'as' => 'catAdmin'
+	]);
+	Route::get('/admin/menu',[
+		'uses' => 'MenuController@index',
+		'as' => 'menuAdmin'
+	]);
+	Route::get('/admin/customer',[
+		'uses' => 'CustomerController@index',
+		'as' => 'customerAdmin'
+	]);
+	Route::get('/admin/product',[
+		'uses' => 'ProductController@index',
+		'as' => 'productAdmin'
+	]);
+	Route::get('/admin/contact',[
+		'uses' => 'ContactController@index',
+		'as' => 'contactAdmin'
+	]);
+	Route::get('/admin/comment',[
+		'uses' => 'CommentController@index',
+		'as' => 'commentAdmin'
+	]);
 });
