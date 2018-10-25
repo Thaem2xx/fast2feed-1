@@ -164,8 +164,18 @@
 	 			<p style="text-align: center;line-height: 50px">Xem thêm &nbsp;<span class="glyphicon">&#xe092;</span></p>
 	 		</div>
 	 	</a>
-	<div id="map" style="width:500px;height:370px;">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.12085798816!2d108.20519251494086!3d16.059216988887126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b15a13c381%3A0x2a8f705f1bfbf085!2zMjU0IE5ndXnhu4VuIFbEg24gTGluaCwgVGjhuqFjIEdpw6FuLCBUaGFuaCBLaMOqLCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1540132844754"
-				width="1135" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-	</div>
+	<div id="map" style="width:500px;height:410px;">
+    
+</div>
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 16.059217, lng: 108.2051925},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc1Q60Qg7MvRRdRgK9aBsXDw5J7l5M3Fk&callback=initMap"
+    async defer></script>
 @endsection
