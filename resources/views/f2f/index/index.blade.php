@@ -164,4 +164,18 @@
 	 			<p style="text-align: center;line-height: 50px">Xem thêm &nbsp;<span class="glyphicon">&#xe092;</span></p>
 	 		</div>
 	 	</a>
+	<div id="map" style="width:500px;height:410px;">
+    
+</div>
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 16.059217, lng: 108.2051925},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc1Q60Qg7MvRRdRgK9aBsXDw5J7l5M3Fk&callback=initMap"
+    async defer></script>
 @endsection

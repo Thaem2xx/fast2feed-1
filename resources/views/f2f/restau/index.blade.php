@@ -19,6 +19,7 @@
 								<p style="margin-top: 35px;font-size: 15px;text-align: left;padding-left: 12px">Đặt món giao hàng tận nơi tại EZI Coffee</p>
 						  	</div>
 						  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="font-family: Time New Roman;border-bottom: 1px solid #EEEEEE">
+<<<<<<< HEAD
 						  		<span style="font-size: 14px">
 						  			<a href="{{ route('trangChu') }}" title="">Trang chủ »</a><a href="" title="">EZI Coffee</a>
 						  		</span>
@@ -57,6 +58,14 @@
 						  		<span style="color: gray;font-size: 16px;">
 						  			12,000 - 39,000
 						  		</span>
+=======
+						  		<span style="font-size: 14px"><a href="{{ route('trangChu') }}" title="">Trang chủ »</a><a href="" title="">EZI Coffee</a></span>
+						  		<p style="font-size: 12px;color: gray;margin-top: 15px">CAFÉ/DESSERT - MÓN VIỆT</p>
+						  		<h2><strong>EZI Coffee</strong></h2>
+						  		<p style="font-size: 14px;color: #464646">30 Ông Ích Khiêm, Q.Hải Châu, Đà nẵng</p>	
+						  		<i class="fa fa-circle" style="color: green"></i>&nbsp; <span style="font-family: Arial;font-size: 15px">Đang mở cửa</span><br>
+						  		<i class="fa fa-money" aria-hidden="true" style="color: gray;font-size: 16px"></i>&nbsp;<span style="color: gray;font-size: 16px;">12,000 - 39,000</span>
+>>>>>>> an
 						  	</div>
 						  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="font-family: Time New Roman;margin-top: 10px;color: gray;font-size: 17px">
 						  		<span>
@@ -73,6 +82,7 @@
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<!-- Leftbar of customer -->
 				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearpaddingl">
 					<div class="panel panel-info">
@@ -108,6 +118,54 @@
 					  					<p>Đặt tối thiểu: <strong>0</strong> - Giảm tối đa: <strong>30,000đ</strong></p>
 					  				</div>
 					  			</div>
+=======
+			@include('templates.f2f.leftmenu')
+			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearpaddingr">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding">
+						<div class="panel panel-info">
+						  <div class="panel-body">
+						  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding">
+								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
+						  			<div class="product_item">
+						  				<div class="product-image">
+						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g14/138802/prof/s/foody-mobile-mi-jpg-416-636262973918757761.jpg" alt="" class=""></a>
+						  				</div>
+										<p><span class='price text-right'>EZI Coffee</span></p>
+										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
+										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
+						  			</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
+						  			<div class="product_item">
+						  				<div class="product-image">
+						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g68/672709/prof/s/foody-mobile-co-jpg-314-636350344186785343.jpg" alt="" class=""></a>
+						  				</div>
+										<p><span class='price text-right'>EZI Coffee</span></p>
+										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
+										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
+						  			</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
+						  			<div class="product_item">
+						  				<div class="product-image">
+						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g14/138802/prof/s/foody-mobile-mi-jpg-416-636262973918757761.jpg" alt="" class=""></a>
+						  				</div>
+										<p><span class='price text-right'>EZI Coffee</span></p>
+										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
+										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
+						  			</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
+						  			<div class="product_item">
+						  				<div class="product-image">
+						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g14/138802/prof/s/foody-mobile-mi-jpg-416-636262973918757761.jpg" alt="" class=""></a>
+						  				</div>
+										<p><span class='price text-right'>EZI Coffee</span></p>
+										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
+										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
+						  			</div>
+								</div>
+>>>>>>> an
 					  		</div>
 						</div>
 					  	<div class="panel-body">

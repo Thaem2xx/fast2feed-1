@@ -181,8 +181,17 @@
 			        <li><a href="{{ route('trangDanhMuc') }}">Tất cả</a></li>
 			        <li><a href="{{ route('trangDanhMuc') }}">Đồ ăn</a></li>
 			        <li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
-			        <li><a href="{{ route('trangDanhMuc') }}">Bán chạy</a></li>
-			        <li><a href="{{ route('trangDanhMuc') }}">Khuyến mãi</a></li>
+			        <li><a href="{{ route('trangDanhSachHD') }}">Danh sách hóa đơn</a></li>
+			        <li><a href="{{ route('trangShipper') }}">Hóa đơn đã nhận</a></li>
+					<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-bell"><span class="badge">1</span></span><span class="caret"></span></a>
+			          <ul class="dropdown-menu" style="width: 350px;">
+			            <div class="table-responsive">
+		                     <p style="font-size:15.5px">Hiện bạn đang có 1 hóa đơn gần khu vực của bạn</p>
+		                     <a href="#" type="button" class="btn btn-danger pull-right"> Chi Tiết Hóa Đơn </a>
+		                  </div>
+			          </ul>
+			        </li>
 			        <li>
 			        	<a href="#">...</a>
 			        	<ul class="sub-menu">
@@ -217,12 +226,12 @@
 		                       </tbody>                       
 		                     </table> 
 		                     <a href="{{ route('trangGioHang') }}" type="button" class="btn btn-success"> Chi Tiết Giỏ Hàng </a>
-		                     <a href="http://localhost/myshop/gio-hang/xoa" type="button" class="btn btn-danger pull-right"> Xóa </a>
+		                     <a href="#" type="button" class="btn btn-danger pull-right"> Xóa </a>
 		                  </div>
 			          </ul>
 			        </li>
-			        <li><a href="#">Đăng nhập</a></li>
-			        <li><a href="#">Trở thành shipper</a></li>
+			        <li><a href="{{ route('trangDangNhap') }}">Đăng nhập</a></li>
+			        <li><a href="{{ route('trangShipper') }}">Trở thành shipper</a></li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 			    

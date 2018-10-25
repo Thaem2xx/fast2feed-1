@@ -35,6 +35,14 @@ Route::namespace('f2f')->group(function(){
 		'uses' => 'RestauController@index',
 		'as' => 'trangNhaHang'
 	]);
+	Route::get('/index-shipper',[
+		'uses' => 'ShipperController@index',
+		'as' => 'trangShipper'
+	]);
+	Route::get('/index-danhsachHD',[
+		'uses' => 'DanhSachHDController@index',
+		'as' => 'trangDanhSachHD'
+	]);
 });
 
 Route::namespace('Auth')->group(function(){
