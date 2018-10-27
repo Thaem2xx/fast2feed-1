@@ -31,6 +31,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($comments as $key => $comment)
+                                    @php
+                                        $customer_name = $comment->customer_name;
+                                        $product_name = $comment->product_name;
+                                        $date_create = $comment->date_create;
+                                        $content = $comment->content;
+                                        $status = $comment->status;
+                                    @endphp
                                     <tr>
                                         <td>
                                             <label class="au-checkbox">
@@ -38,10 +46,10 @@
                                                 <span class="au-checkmark"></span>
                                             </label>
                                         </td>
-                                        <td class="process">xuannam</td>
-                                        <td class="process">trà đào</td>
-                                        <td>10/10/2018</td>
-                                        <td>Ngon mà cũng k ngon lắm. cũng được nói chung tàm tạm</td>
+                                        <td class="process">{{ $customer_name }}</td>
+                                        <td class="process">{{ $product_name }}</td>
+                                        <td>{{ $date_create }}</td>
+                                        <td>{{ $content }}</td>
                                         <td>
                                         	<label class="switch switch-3d switch-success mr-3">
 	                                            <input type="checkbox" class="switch-input" checked="true">
@@ -58,7 +66,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

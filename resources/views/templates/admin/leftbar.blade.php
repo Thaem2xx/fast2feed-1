@@ -35,7 +35,7 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('userAdmin') }}">
-                                        <i class="fas fa-users"></i>User</a>
+                                        <i class="fas fa-users"></i>Account</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('userAdmin') }}">

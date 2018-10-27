@@ -39,6 +39,17 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($customers as $key => $customer)
+                                            @php
+                                                $name = $customer->customer_name;
+                                                $images = $customer->images;
+                                                $address = $customer->address;
+                                                $transport_fee = $customer->transport_fee;
+                                                $status = $customer->status_customer;
+                                                $username = $customer->username;
+                                                
+
+                                            @endphp
                                             <tr class="tr-shadow">
                                                 <td>
                                                     <label class="au-checkbox">
@@ -46,25 +57,29 @@
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
-                                                <td class="desc">Gongcha</td>
+                                                <td class="desc">{{ $name }}</td>
                                                 <td>
                                                     <div class="image">
-                                                        <a href="/templates/admin/images/icon/avatar.jpg">
-                                                            <img src="/templates/admin/images/icon/avatar.jpg" alt="Admin" width="50px" />
+                                                        <a href="/storage/app/files/customer/{{ $images }}">
+                                                            <img src="/storage/app/files/customer/{{ $images }}" alt="Admin" width="50px" />
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td>Nguyễn Văn Linh</td>
-                                                <td>7000</td>
+                                                <td>{{ $address }}</td>
+                                                <td>{{ $transport_fee }}</td>
                                                 <td>
                                                     <label class="switch switch-3d switch-success mr-3">
-                                                        <input type="checkbox" class="switch-input" checked="true">
+                                                        <input type="checkbox" class="switch-input" 
+                                                        @if($status == 1)
+                                                        checked="true"
+                                                        @endif
+                                                        >
                                                         <span class="switch-label"></span>
                                                         <span class="switch-handle"></span>
                                                     </label>
                                                 </td>
                                                 <td>
-                                                    <span class="block-email">Khachhang1</span>
+                                                    <span class="block-email">{{ $username }}</span>
                                                 </td>
                                                 
                                                 <td>
@@ -78,6 +93,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
