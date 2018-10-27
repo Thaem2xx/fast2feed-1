@@ -39,9 +39,33 @@ Route::namespace('f2f')->group(function(){
 		'uses' => 'ShipperController@index',
 		'as' => 'trangShipper'
 	]);
-	Route::get('/index-danhsachHD',[
+	Route::get('/danhsachHD',[
 		'uses' => 'DanhSachHDController@index',
 		'as' => 'trangDanhSachHD'
+	]);
+	Route::get('/xac-nhan-code',[
+		'uses' => 'ConfirmCodeController@index',
+		'as' => 'trangConfirmCode'
+	]);
+	Route::get('/chon-anh',[
+		'uses' => 'ChonAnhController@index',
+		'as' => 'trangChonAnh'
+	]);
+	Route::get('/chon-anh-2',[
+		'uses' => 'ChonAnh2Controller@index',
+		'as' => 'trangChonAnh2'
+	]);
+	Route::get('/chon-CMND',[
+		'uses' => 'ChonCMNDController@index',
+		'as' => 'trangChonCMND'
+	]);
+	Route::get('/chon-BLX',[
+		'uses' => 'ChonBLXController@index',
+		'as' => 'trangChonBLX'
+	]);
+	Route::get('/doi-phan-hoi',[
+		'uses' => 'DoiPhanHoiController@index',
+		'as' => 'trangDoiPhanHoi'
 	]);
 });
 
@@ -57,6 +81,10 @@ Route::namespace('Auth')->group(function(){
 	Route::get('/dang-ki',[
 		'uses' => 'RegisterController@index',
 		'as' => 'trangDangKi'
+	]);
+	Route::get('/dang-ki-shipper',[
+		'uses' => 'RegisterShipperController@index',
+		'as' => 'trangDangKiShipper'
 	]);
 });
 

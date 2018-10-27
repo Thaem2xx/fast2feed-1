@@ -136,7 +136,7 @@
 			          </ul>
 			        </li>
 			        <li><a href="{{ route('trangDangNhap') }}">Đăng nhập</a></li>
-			        <li><a href="{{ route('trangShipper') }}">Trở thành shipper</a></li>
+			        <li><a href="{{ route('trangDangKiShipper') }}">Trở thành shipper</a></li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 			    
