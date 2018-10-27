@@ -23,13 +23,22 @@
                                             </label>
                                         </th>
                                         <th>name</th>
-                                        <th>mail</th>
+                                        <th>email</th>
                                         <th>address</th>
                                         <th>phone</th>
+                                        <th>content</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($contacts as $key => $contact)
+                                    @php
+                                        $name = $contact->contact_name;
+                                        $email = $contact->email;
+                                        $address = $contact->address;
+                                        $phone = $contact->phone;
+                                        $content = $contact->content;
+                                    @endphp
                                     <tr>
                                         <td>
                                             <label class="au-checkbox">
@@ -37,10 +46,11 @@
                                                 <span class="au-checkmark"></span>
                                             </label>
                                         </td>
-                                        <td class="process">xuannam</td>
-                                        <td>xnam79@gmail.com</td>
-                                        <td>ong ích khiêm</td>
-                                        <td>0906498644</td>
+                                        <td class="process">{{ $name }}</td>
+                                        <td>{{ $email }}</td>
+                                        <td>{{ $address }}</td>
+                                        <td>{{ $phone }}</td>
+                                        <td>{{ $content }}</td>
                                         <td>
                                             <div class="table-data-feature">
                                                 
@@ -50,7 +60,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

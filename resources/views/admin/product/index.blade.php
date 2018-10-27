@@ -51,8 +51,8 @@
                                                 
                                                 <td>
                                                     <div class="image">
-                                                        <a href="/templates/admin/images/icon/avatar.jpg">
-                                                            <img src="/templates/admin/images/icon/avatar.jpg" alt="Admin" width="50px" />
+                                                        <a href="/storage/app/files/product/banh.jpg">
+                                                            <img src="/storage/app/files/product/banh.jpg" alt="Admin" width="50px" />
                                                         </a>
                                                     </div>
                                                 </td>

@@ -36,6 +36,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($menus as $key => $menu)
+                                            @php
+                                                $id = $menu->menu_id;
+                                                $name = $menu->menu_name;
+                                                $status = $menu->status;
+                                            @endphp
                                             <tr class="tr-shadow">
                                                 <td>
                                                     <label class="au-checkbox">
@@ -43,11 +49,15 @@
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
-                                                <td>1</td>
-                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>{{ $id }}</td>
+                                                <td class="desc">{{ $name }}</td>
                                                 <td>
                                                     <label class="switch switch-3d switch-success mr-3">
-                                                        <input type="checkbox" class="switch-input" checked="true">
+                                                        <input type="checkbox" class="switch-input" 
+                                                        @if($status == 1)
+                                                            checked="true"
+                                                        @endif
+                                                        >
                                                         <span class="switch-label"></span>
                                                         <span class="switch-handle"></span>
                                                     </label>
@@ -64,6 +74,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
