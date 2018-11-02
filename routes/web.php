@@ -67,6 +67,10 @@ Route::namespace('f2f')->group(function(){
 		'uses' => 'DoiPhanHoiController@index',
 		'as' => 'trangDoiPhanHoi'
 	]);
+	Route::get('/thong-bao',[
+		'uses' => 'ThongBaoController@index',
+		'as' => 'trangThongBao'
+	]);
 });
 
 Route::namespace('Auth')->group(function(){

@@ -164,7 +164,7 @@
 	 			<p style="text-align: center;line-height: 50px">Xem thêm &nbsp;<span class="glyphicon">&#xe092;</span></p>
 	 		</div>
 	 	</a>
-	<div id="map" style="width:500px;height:410px;">
+	<div id="map" class="row" style="width:1169px;height:300px;">
     
 </div>
 <script>
