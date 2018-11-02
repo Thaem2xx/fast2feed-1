@@ -88,36 +88,68 @@ Route::namespace('Auth')->group(function(){
 	]);
 });
 
-Route::namespace('Admin')->group(function(){
-	Route::get('/admin',[
+Route::namespace('Admin')->prefix('admin')->group(function(){
+	Route::get('/',[
 		'uses' => 'IndexController@index',
 		'as' => 'trangChuAdmin'
 	]);
-	Route::get('/admin/user',[
+	Route::get('/user',[
 		'uses' => 'UserController@index',
 		'as' => 'userAdmin'
 	]);
-	Route::get('/admin/cat',[
+	Route::get('/user/add',[
+		'uses' => 'UserController@getAdd',
+		'as' => 'adduserAdmin'
+	]);
+	Route::get('/cat',[
 		'uses' => 'CatController@index',
 		'as' => 'catAdmin'
 	]);
-	Route::get('/admin/menu',[
+	Route::get('/cat/add',[
+		'uses' => 'CatController@getAdd',
+		'as' => 'addcatAdmin'
+	]);
+	Route::post('/cat/add',[
+		'uses' => 'CatController@postAdd',
+		'as' => 'addcatAdmin'
+	]);
+	Route::get('/cat/edit-{cid}',[
+		'uses' => 'CatController@getEdit',
+		'as' => 'editcatAdmin'
+	]);
+	Route::post('/cat/edit-{cid}',[
+		'uses' => 'CatController@postEdit',
+		'as' => 'editcatAdmin'
+	]);
+	Route::get('/menu',[
 		'uses' => 'MenuController@index',
 		'as' => 'menuAdmin'
 	]);
-	Route::get('/admin/customer',[
+	Route::get('/menu/add',[
+		'uses' => 'MenuController@getAdd',
+		'as' => 'addmenuAdmin'
+	]);
+	Route::get('/customer',[
 		'uses' => 'CustomerController@index',
 		'as' => 'customerAdmin'
 	]);
-	Route::get('/admin/product',[
+	Route::get('/customer/add',[
+		'uses' => 'CustomerController@getAdd',
+		'as' => 'addcustomerAdmin'
+	]);
+	Route::get('/product',[
 		'uses' => 'ProductController@index',
 		'as' => 'productAdmin'
 	]);
-	Route::get('/admin/contact',[
+	Route::get('/product/add',[
+		'uses' => 'ProductController@getAdd',
+		'as' => 'addproductAdmin'
+	]);
+	Route::get('/contact',[
 		'uses' => 'ContactController@index',
 		'as' => 'contactAdmin'
 	]);
-	Route::get('/admin/comment',[
+	Route::get('/comment',[
 		'uses' => 'CommentController@index',
 		'as' => 'commentAdmin'
 	]);

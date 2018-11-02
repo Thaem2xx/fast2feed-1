@@ -17,4 +17,8 @@ class CustomerController extends Controller
     	$customers = $this->customer->getAll();
     	return view('admin.customer.index', compact('customers'));
     }
+    public function getAdd()
+    {
+    	return view('admin.customer.add');
+    }
 }

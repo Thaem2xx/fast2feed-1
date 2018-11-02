@@ -13,9 +13,11 @@
                                 <h3 class="title-5 m-b-35">data Product</h3>
                                 <div class="table-data__tool">
                                         <div class="table-data__tool-right">
-                                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                           
+                                            <a href="{{ route('addproductAdmin') }}" title="" class="au-btn au-btn-icon au-btn--green au-btn--small">
                                                 <i class="zmdi zmdi-plus"></i>add Product
-                                            </button>
+                                                
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -40,6 +42,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($products as $key => $product)
+                                            @php
+                                                $name = $product->product_name;
+                                                $images = $product->images;
+                                                $price = $product->price;
+                                                $amount = $product->amount;
+                                                $catName = $product->catalog_name;
+                                                $menuName = $product->menu_name;
+                                                $customerName = $product->customer_name;
+                                            @endphp
                                             <tr class="tr-shadow">
                                                 <td>
                                                     <label class="au-checkbox">
@@ -47,26 +59,26 @@
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
-                                                <td class="desc">Gongcha</td>
+                                                <td class="desc">{{ $name }}</td>
                                                 
                                                 <td>
                                                     <div class="image">
-                                                        <a href="/storage/app/files/product/banh.jpg">
-                                                            <img src="/storage/app/files/product/banh.jpg" alt="Admin" width="50px" />
+                                                        <a href="/storage/app/files/product/{{ $images }}">
+                                                            <img src="/storage/app/files/product/{{ $images }}" alt="Admin" width="50px" />
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td>35000</td>
-                                                <td>121</td>
+                                                <td>{{ $price }}</td>
+                                                <td>{{ $amount }}</td>
                                                 
                                                 <td>
-                                                    <span class="block-email">cat1</span>
+                                                    <span class="block-email">{{ $catName }}</span>
                                                 </td>
                                                 <td>
-                                                    <span class="block-email">menu1</span>
+                                                    <span class="block-email">{{ $menuName }}</span>
                                                 </td>
                                                 <td>
-                                                    <span class="block-email">asdasdas</span>
+                                                    <span class="block-email">{{ $customerName }}</span>
                                                 </td>
                                                 <td>
                                                     <div class="table-data-feature">
@@ -79,6 +91,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

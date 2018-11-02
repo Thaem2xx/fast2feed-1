@@ -17,4 +17,9 @@ class MenuController extends Controller
     	$menus = $this->menu->getAll();
     	return view('admin.menu.index',compact('menus'));
     }
+    public function getAdd()
+    {
+    	return view('admin.menu.add');
+    }
+    
 }

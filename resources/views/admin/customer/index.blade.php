@@ -13,9 +13,10 @@
                                 <h3 class="title-5 m-b-35">data customer</h3>
                                 <div class="table-data__tool">
                                         <div class="table-data__tool-right">
-                                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            
+                                            <a href="{{ route('addcustomerAdmin') }}" title="" class="au-btn au-btn-icon au-btn--green au-btn--small">
                                                 <i class="zmdi zmdi-plus"></i>add customer
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
