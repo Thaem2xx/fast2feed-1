@@ -78,8 +78,8 @@
                                                     </td>
                                                     <td>
                                                         <div class="image">
-                                                            <a href="/storage/app/files/account/{{ $avatar }}">
-                                                                <img src="/storage/app/files/account/{{ $avatar }}" alt="Admin" width="50px" />
+                                                            <a href="/public/files/account/{{ $avatar }}">
+                                                                <img src="/public/files/account/{{ $avatar }}" alt="Admin" width="50px" />
                                                             </a>
                                                         </div>
                                                     </td>

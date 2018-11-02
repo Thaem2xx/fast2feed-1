@@ -63,8 +63,8 @@
                                                 
                                                 <td>
                                                     <div class="image">
-                                                        <a href="/storage/app/files/product/{{ $images }}">
-                                                            <img src="/storage/app/files/product/{{ $images }}" alt="Admin" width="50px" />
+                                                        <a href="/public/files/product/{{ $images }}">
+                                                            <img src="/public/files/product/{{ $images }}" alt="Admin" width="50px" />
                                                         </a>
                                                     </div>
                                                 </td>

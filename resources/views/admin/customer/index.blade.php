@@ -61,8 +61,8 @@
                                                 <td class="desc">{{ $name }}</td>
                                                 <td>
                                                     <div class="image">
-                                                        <a href="/storage/app/files/customer/{{ $images }}">
-                                                            <img src="/storage/app/files/customer/{{ $images }}" alt="Admin" width="50px" />
+                                                        <a href="/public/files/customer/{{ $images }}">
+                                                            <img src="/public/files/customer/{{ $images }}" alt="Admin" width="50px" />
                                                         </a>
                                                     </div>
                                                 </td>
