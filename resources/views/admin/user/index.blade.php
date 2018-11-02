@@ -17,9 +17,10 @@
                                     </h3>
                                     <div class="table-data__tool" style="padding-left: 40px">
                                         <div class="table-data__tool-right">
-                                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            
+                                            <a href="{{ route('adduserAdmin') }}" title="" class="au-btn au-btn-icon au-btn--green au-btn--small">
                                                 <i class="zmdi zmdi-plus"></i>add Account
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="table-responsive table-data">

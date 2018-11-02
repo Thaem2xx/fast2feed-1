@@ -13,13 +13,16 @@
                                 <h3 class="title-5 m-b-35">data catalog</h3>
                                 <div class="table-data__tool">
                                         <div class="table-data__tool-right">
-                                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            <a href="{{ route('addcatAdmin') }}" title="" class="au-btn au-btn-icon au-btn--green au-btn--small">
                                                 <i class="zmdi zmdi-plus"></i>add cat
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="table-responsive table-responsive-data2">
+                                    @if (Session::has('msg'))
+                                        <p style="color: red">{{ Session::get('msg') }}</p>
+                                    @endif
                                     <table class="table table-data2">
                                         <thead>
                                             <tr>
@@ -41,6 +44,7 @@
                                                 $id = $cat->catalog_id;
                                                 $name = $cat->catalog_name;
                                                 $status = $cat->status;
+                                                $urlEdit = route('editcatAdmin', $id);
                                             @endphp
                                             <tr class="tr-shadow">
                                                 <td>
@@ -65,7 +69,7 @@
                                                 
                                                 <td>
                                                     <div class="table-data-feature">
-                                                        <a href="#" title="" class="item">
+                                                        <a href="{{ $urlEdit }}" title="" class="item">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </a>
                                                         <a href="#" title="" class="item">

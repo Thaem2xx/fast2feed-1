@@ -17,6 +17,10 @@ class UserController extends Controller
     	$accounts = $this->account->getAll();
     	return view('admin.user.index', compact('accounts'));
     }
+    public function getAdd()
+    {
+    	return view('admin.user.add');
+    }
 }
 
 
