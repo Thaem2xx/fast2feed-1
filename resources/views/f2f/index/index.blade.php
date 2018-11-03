@@ -164,10 +164,18 @@
 	 			<p style="text-align: center;line-height: 50px">Xem thêm &nbsp;<span class="glyphicon">&#xe092;</span></p>
 	 		</div>
 	 	</a>
-
+		
 	 	<div class="row">
-	 		<div id="mep" style="width:1169px;height:300px;"></div>
+	 		<div id="mep" style="width:1169px;height:300px;">
+	 			<div class="control-left-wrapper">
+	 				<div class="zoom-in" id="zoom-in"><i class="fa fa-plus"></i></div>
+	 				<div class="zoom-out" id="zoom-out"><i></i>></div>
+	 				<div></div>
+	 			</div>
+	 		</div>
 	 	</div>
+	 		
+	 	
 	
 	<script>
       	
@@ -176,7 +184,9 @@
 
         var map = new google.maps.Map(document.getElementById('mep'), {
           zoom: 16,
-          center: myLatLng
+          center: myLatLng,
+          zoomControl: true, //ẩn or k ẩn nút phóng thu trong map
+          scrollwheel: true, //có or không thể zoom map
         });
 
         var marker = new google.maps.Marker({
@@ -184,6 +194,13 @@
           map: map,
           title: 'Trường Đại Học Duy Tân'
         });
+
+        /*var customerMapType = new google.maps.StyledMapType([
+        	{ stylers: [{hue: '#D2E4C8'}]},
+        	]);
+        var customerMapTypeID = 'customer_style';
+        map.mapTypes.set(customerMapTypeID, customerMapType);
+        map.setMapTypeID(customerMapTypeID);*/
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzmyhWaNEQ_i55-LLOfNPka-8BAhZRUaM&callback=initMap"
