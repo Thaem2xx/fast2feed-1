@@ -3,6 +3,13 @@
 	Khách hàng
 @endsection
 @section('content')
+	@php
+		$name = title_case($getCustomer->customer_name);
+		$images = $getCustomer->images;
+		$catalog_name = title_case($getCustomer->catalog_name);
+		$address = title_case($getCustomer->address);
+		$rate = $getCustomer->rate;
+	@endphp
 	<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding" style="margin-top: 15px;">
 				
@@ -14,30 +21,42 @@
 						  <div class="panel-body">
 					  		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
 				                <a href="https://media.foody.vn/res/g77/761834/prof/s/foody-upload-api-foody-mobile-tiger-1-jpg-180911164411.jpg" class="jqzoom" rel="gal1" title="triumph">
-						            <img src="https://media.foody.vn/res/g77/761834/prof/s/foody-upload-api-foody-mobile-tiger-1-jpg-180911164411.jpg" alt="" style="width:480px;height: 300px">
+						            <img src="/public/files/customer/{{ $images }}" alt="" style="width:480px;height: 300px">
 						        </a>
-								<p style="margin-top: 35px;font-size: 15px;text-align: left;padding-left: 12px">Đặt món giao hàng tận nơi tại EZI Coffee</p>
+								<p style="margin-top: 35px;font-size: 15px;text-align: left;padding-left: 12px">Đặt món giao hàng tận nơi tại {{ $name }}</p>
 						  	</div>
 						  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="font-family: Time New Roman;border-bottom: 1px solid #EEEEEE">
 						  		<span style="font-size: 14px">
-						  			<a href="{{ route('trangChu') }}" title="">Trang chủ »</a><a href="" title="">EZI Coffee</a>
+						  			<a href="{{ route('trangChu') }}" title="">Trang chủ »</a><a href="" title="">{{ $name }}</a>
 						  		</span>
-						  		<p style="font-size: 12px;color: gray;margin-top: 15px">
-						  			CAFÉ/DESSERT - MÓN VIỆT
+						  		<p style="font-size: 15px;color: gray;margin-top: 15px">
+						  			{{ $catalog_name }}
 						  		</p>
 						  		<h3>
-						  			<strong>EZI Coffee</strong>
+						  			<strong>{{ $name }}</strong>
 						  		</h3>
 						  		<p style="font-size: 14px;color: #464646">
-						  			30 Ông Ích Khiêm, Q.Hải Châu, Đà nẵng
+						  			{{ $address }}
 						  		</p>
+						  		
 						  		<div class="star-rate">
-						  			<i class="fa fa-star" aria-hidden="true"></i>
-							  		<i class="fa fa-star" aria-hidden="true"></i>
-							  		<i class="fa fa-star" aria-hidden="true"></i>
-							  		<i class="fa fa-star" aria-hidden="true"></i>
-							  		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-						  		</div>
+						  			@php
+						  			$rate2 = strlen($rate);
+
+					  				if($rate2 > 1){
+					  					for($i=1;$i<=$rate;$i++){
+					  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
+					  					}
+					  					echo '<i class="fa fa-star-half-o" aria-hidden="true"></i>';
+					  				}else {
+					  					for($i=1;$i <= $rate;$i++){
+					  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
+					  					}
+					  				}
+
+							  		@endphp
+							  		
+							  	</div>
 						  		&nbsp;
 						  		<span style="color: #02A5E5;font-size: 16px">2 bình luận</span>
 						  		<br>	

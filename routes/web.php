@@ -12,6 +12,7 @@
 */
 Route::pattern('id','[0-9]*');
 Route::pattern('cid','[0-9]*');
+Route::pattern('cusId','[0-9]*');
 Route::pattern('slug','(.*)');
 
 Route::namespace('f2f')->group(function(){
@@ -19,6 +20,7 @@ Route::namespace('f2f')->group(function(){
 		'uses' => 'IndexController@index',
 		'as' => 'trangChu'
 	]);
+	
 	Route::get('/gio-hang',[
 		'uses' => 'CartController@index',
 		'as' => 'trangGioHang'
@@ -31,9 +33,9 @@ Route::namespace('f2f')->group(function(){
 		'uses' => 'CatController@index',
 		'as' => 'trangDanhMuc'
 	]);
-	Route::get('/nha-hang',[
+	Route::get('/nha-hang/{slug}-{cusId}',[
 		'uses' => 'RestauController@index',
-		'as' => 'trangNhaHang'
+		'as' => 'trangCustomer'
 	]);
 	Route::get('/index-shipper',[
 		'uses' => 'ShipperController@index',

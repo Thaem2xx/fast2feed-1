@@ -17,27 +17,27 @@
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner" role="listbox">
 			    <div class="item active">
-			      <a href="{{ route('trangNhaHang') }}" title=""><img src="/templates/f2f/images/slide/slide1.jpg" alt="" style="width: 1169px;height: 300px"></a>
+			      <a href="#" title=""><img src="/templates/f2f/images/slide/slide1.jpg" alt="" style="width: 1169px;height: 300px"></a>
 			      <div class="carousel-caption">
 			      </div>
 			    </div>
 			    <div class="item">
-			      <a href="{{ route('trangNhaHang') }}" title=""><img src="/templates/f2f/images/slide/slide2.jpg" alt="" style="width: 1169px;height: 300px"></a>
+			      <a href="# title=""><img src="/templates/f2f/images/slide/slide2.jpg" alt="" style="width: 1169px;height: 300px"></a>
 			      <div class="carousel-caption">
 			      </div>
 			    </div>
 			    <div class="item">
-			      <a href="{{ route('trangNhaHang') }}" title=""><img src="/templates/f2f/images/slide/slide3.jpg" alt="" style="width: 1169px;height: 300px"></a>
+			      <a href="#" title=""><img src="/templates/f2f/images/slide/slide3.jpg" alt="" style="width: 1169px;height: 300px"></a>
 			      <div class="carousel-caption">
 			      </div>
 			    </div>
 			    <div class="item">
-			      <a href="{{ route('trangNhaHang') }}" title=""><img src="/templates/f2f/images/slide/slide4.jpg" alt="" style="width: 1169px;height: 300px"></a>
+			      <a href="#" title=""><img src="/templates/f2f/images/slide/slide4.jpg" alt="" style="width: 1169px;height: 300px"></a>
 			      <div class="carousel-caption">
 			      </div>
 			    </div>
 			    <div class="item">
-			      <a href="{{ route('trangNhaHang') }}" title=""><img src="/templates/f2f/images/slide/slide5.jpg" alt="" style="width: 1169px;height: 300px"></a>
+			      <a href="#" title=""><img src="/templates/f2f/images/slide/slide5.jpg" alt="" style="width: 1169px;height: 300px"></a>
 			      <div class="carousel-caption">
 			      </div>
 			    </div>
@@ -62,86 +62,30 @@
 						<div class="panel panel-info">
 						  <div class="panel-body">
 						  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding">
-						  		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
+						  		@foreach($customers as $key => $customer)
+						  		@php
+						  			$cusId = $customer->customer_id;
+						  			$images = $customer->images;
+						  			$customer_name = $customer->customer_name;
+						  			$slug = str_slug($customer_name);
+						  			$name = title_case($customer_name);
+						  			$catalog = title_case($customer->catalog_name);
+						  			$oldAddress = title_case($customer->address);
+						  			$address = str_limit($oldAddress, 25);
+						  			$url = route('trangCustomer',['slug' => $slug, 'cusId' => $cusId])
+						  		@endphp
 								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g14/138802/prof/s/foody-mobile-mi-jpg-416-636262973918757761.jpg" alt="" class=""></a>
+						  					<a href="{{ $url }}"><img src="/public/files/customer/{{ $images }}" alt="" class=""></a>
 						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
+										<p><span class='price text-right'>{{ $name }}</span></p>
+										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">{{ $address }}</p>
+										<p style="color: black;font-size: 14px;">{{ $catalog }}</p>
 						  			</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g68/672709/prof/s/foody-mobile-co-jpg-314-636350344186785343.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g71/703601/prof/s/foody-mobile-1sa-jpg.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g70/695173/prof/s/foody-mobile-cha-jpg.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g14/138802/prof/s/foody-mobile-mi-jpg-416-636262973918757761.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
-						  			<div class="product_item">
-						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g68/672709/prof/s/foody-mobile-co-jpg-314-636350344186785343.jpg" alt="" class=""></a>
-						  				</div>
-										<p><span class='price text-right'>EZI Coffee</span></p>
-										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
-										<p style="color: black;font-size: 14px;">CAFÉ/DESSERT-MÓN VIỆT</p>
-						  			</div>
-								</div>
+								@endforeach
+
 								<!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">

@@ -9,11 +9,14 @@ class Customer extends Model
 {
     protected $table = "customer";
     protected $primarykey = "customer_id";
-    public $timestamp = false;
+    public $timestamps = false;
 
     public function getAll()
     {
-    	return DB::table('customer')->join('account', 'account.account_id', '=', 'customer.account_id')->get();
-    	
+    	return DB::table('customer')->join('catalog', 'customer.catalog_id', '=', 'catalog.catalog_id')->join('account', 'account.account_id', '=', 'customer.account_id')->get();
+    }
+    public function getItem($cusId)
+    {
+    	return DB::table('customer')->join('catalog', 'customer.catalog_id', '=', 'catalog.catalog_id')->join('account', 'account.account_id', '=', 'customer.account_id')->where('customer_id', $cusId)->first();
     }
 }

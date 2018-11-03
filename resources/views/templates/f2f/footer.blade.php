@@ -1,5 +1,5 @@
 <!-- Footer -->
-		<div class="row" id="bank">
+		<div class="row" id="bank" style="margin-top: 10px">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 no-padding">
 				    <div class="footer-info">            
