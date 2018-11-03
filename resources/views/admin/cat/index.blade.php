@@ -17,8 +17,8 @@
                                                 <i class="zmdi zmdi-plus"></i>add cat
                                             </a>
                                         </div>
-                                    </div>
                                 </div>
+                            </div>
                                 <div class="table-responsive table-responsive-data2">
                                     @if (Session::has('msg'))
                                         <p style="color: red">{{ Session::get('msg') }}</p>

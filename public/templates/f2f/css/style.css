@@ -251,6 +251,7 @@ transform: scale(1);
   border-right: 1px solid #bce8f1;
   padding-top: 20px;
   padding-bottom: 25px;
+  margin-top: 10px;
 }
 .footer-info li{
       list-style: none;
@@ -844,7 +845,7 @@ img {
     vertical-align: middle;
     border-style: none;
 }
-#map {
+#mep {
     height: 100%;
 }
 html, body {

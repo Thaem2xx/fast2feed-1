@@ -181,6 +181,14 @@
 			        <li><a href="{{ route('trangDanhMuc') }}">Tất cả</a></li>
 			        <li><a href="{{ route('trangDanhMuc') }}">Đồ ăn</a></li>
 			        <li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
+			        <li>
+			        	<a href="#">...</a>
+			        	<ul class="sub-menu">
+			        		<li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
+			        		<li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
+			        		<li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
+			        	</ul>
+			        </li>
 			        <li><a href="{{ route('trangDanhSachHD') }}">Danh sách hóa đơn</a></li>
 			        <li><a href="{{ route('trangShipper') }}">Hóa đơn đã nhận</a></li>
 					<li class="dropdown">
@@ -192,14 +200,7 @@
 		                  </div>
 			          </ul>
 			        </li>
-			        <li>
-			        	<a href="#">...</a>
-			        	<ul class="sub-menu">
-			        		<li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
-			        		<li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
-			        		<li><a href="{{ route('trangDanhMuc') }}">Thức uống</a></li>
-			        	</ul>
-			        </li>
+			        
 			       </ul>
 			      <ul class="nav navbar-nav navbar-right">
 			      	<li><a href="#">Tải App</a></li>

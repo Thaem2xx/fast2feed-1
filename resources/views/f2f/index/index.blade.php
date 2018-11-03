@@ -164,18 +164,28 @@
 	 			<p style="text-align: center;line-height: 50px">Xem thêm &nbsp;<span class="glyphicon">&#xe092;</span></p>
 	 		</div>
 	 	</a>
-	<div id="map" class="row" style="width:1169px;height:300px;">
-    
-</div>
-<script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 16.059217, lng: 108.2051925},
-          zoom: 8
+
+	 	<div class="row">
+	 		<div id="mep" style="width:1169px;height:300px;"></div>
+	 	</div>
+	
+	<script>
+      	
+      	function initMap() {
+        var myLatLng = {lat: 16.059911, lng: 108.209889};
+
+        var map = new google.maps.Map(document.getElementById('mep'), {
+          zoom: 16,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Trường Đại Học Duy Tân'
         });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc1Q60Qg7MvRRdRgK9aBsXDw5J7l5M3Fk&callback=initMap"
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzmyhWaNEQ_i55-LLOfNPka-8BAhZRUaM&callback=initMap"
     async defer></script>
 @endsection
