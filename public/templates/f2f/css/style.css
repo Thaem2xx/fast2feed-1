@@ -853,3 +853,11 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.control-left-wrapper{
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    cursor: pointer;
+    margin: 14px 10px 0;
+}
