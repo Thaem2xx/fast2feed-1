@@ -17,7 +17,7 @@
 				        <a href="" title="" style="color: black;font-size: 16px;">
 				        	<div class="app-download">
 					        	<span style="padding-left: 16px;position: absolute;top: 8px;">				        	
-					        		<img class="icon-app" src="/templates/f2f/images/icon/ios.jpg" alt="" style="width: 22px; margin-right: 5px;margin-bottom: 10px"><span>iOS</span>
+					        		<i class="fa fa-apple" style="font-size:24px; margin-right: 10px"></i><span>iOS</span>
 					        	</span>
 
 				       		 </div>
@@ -25,7 +25,7 @@
 				        <a href="" title="" style="color: black;font-size: 16px">
 				        	<div class="app-download">
 					        	<span style="padding-left: 10px;position: absolute;">				        	
-					        		<img class="icon-app" src="/templates/f2f/images/icon/android.png" alt="" style="width: 33px; margin-right: 1px;margin-bottom: 10px"><span>Android</span>
+					        		<i class="fa fa-android" style="font-size:24px; margin-right: 10px; padding-top: 5px; padding-left: 5px"></i><span>Android</span>
 					        	</span>
 
 				        	</div>

@@ -49,7 +49,7 @@
 		/*footer*/
 		.app-download:hover {
 			color: #0288D1;
-			border-color: red;
+			border-color: #0288D1;
 		}
 		.app-download {
 			-webkit-transition: all .2s linear;
