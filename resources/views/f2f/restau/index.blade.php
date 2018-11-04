@@ -8,7 +8,14 @@
 		$images = $getCustomer->images;
 		$catalog_name = title_case($getCustomer->catalog_name);
 		$address = title_case($getCustomer->address);
-		$rate = $getCustomer->rate;
+		$rate = round($getCustomer->rate,1);
+		$timeopen = $getCustomer->time_open;
+		$timeclose = $getCustomer->time_close;
+		$min_money = $getCustomer->min_money;
+		$max_money = $getCustomer->max_money;
+		$transport_fee = $getCustomer->transport_fee;
+
+
 	@endphp
 	<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding" style="margin-top: 15px;">
@@ -42,12 +49,26 @@
 						  		<div class="star-rate">
 						  			@php
 						  			$rate2 = strlen($rate);
+						  			$arrRate = explode('.',$rate);
 
+
+						  			
 					  				if($rate2 > 1){
-					  					for($i=1;$i<=$rate;$i++){
-					  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
-					  					}
-					  					echo '<i class="fa fa-star-half-o" aria-hidden="true"></i>';
+					  					if($arrRate[1] >= 1 && $arrRate[1] <= 3){
+							  				for($i=1;$i<=$rate;$i++){
+						  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
+						  					}
+							  			}else if($arrRate[1] >= 4 && $arrRate[1] <= 6){
+							  				for($i=1;$i<=$rate;$i++){
+						  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
+						  					}
+						  					echo '<i class="fa fa-star-half-o" aria-hidden="true"></i>';
+							  			}else {
+							  				for($i=1;$i<=$rate;$i++){
+						  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
+						  					}
+						  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
+							  			}
 					  				}else {
 					  					for($i=1;$i <= $rate;$i++){
 					  						echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;';
@@ -68,13 +89,13 @@
 						  			<i class="fa fa-clock-o" aria-hidden="true" style="color: gray;font-size: 18px"></i>
 						  		</span>
 						  		<span style="font-weight: 500;font-size: 16px">
-						  			08:00 - 21:00
+						  			{{ $timeopen }} - {{ $timeclose }}
 						  		</span><br>
 						  		<i class="fa fa-money" aria-hidden="true" style="color: gray;font-size: 16px">
 						  			
 						  		</i>&nbsp;
 						  		<span style="color: gray;font-size: 16px;">
-						  			12,000 - 39,000
+						  			{{ $min_money }} - {{ $max_money }}
 						  		</span>
 
 						  	</div>
@@ -83,7 +104,7 @@
 						  			Phí vận chuyển : 
 						  		</span>
 						  		<span>
-						  			7,000đ / 1km
+						  			{{ $transport_fee }}đ / 1km
 						  		</span><br>	
 						  	</div>
 						  	
@@ -99,9 +120,14 @@
 					  <div class="panel-body" style="padding:0px">
 					  	
 					  	<div class="list-group">
-						  <a id="active" href="{{ route('trangDanhMuc') }}" class="list-group-item">Kem sữa</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Trà nguyên chất</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Trái cây</a>
+					  		@foreach($getMenu as $key => $menu)
+					  		@php
+					  			$menuName = title_case($menu->menu_name);
+					  		@endphp
+						  	<a href="{{ route('trangDanhMuc') }}" class="list-group-item">{{ $menuName }}</a>
+						  	
+						  	@endforeach
+						  	{{-- <a id="active" href="{{ route('trangDanhMuc') }}" class="list-group-item">Kem sữa</a> --}}
 						</div>
 					  </div>
 					</div>
