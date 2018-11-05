@@ -9,19 +9,13 @@
 					  		</form>
 					  	</div>
 					  	<div class="list-group">
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Tất cả</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Đồ ăn</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Thức uống</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Tráng miệng</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Trà sữa</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Cơm gà</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Từ 20k-40k</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Mì bún phở cháo</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Món chay</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Bánh ngọt</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Cà phê</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Ăn vặt & Ăn nhẹ</a>
-						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">Nước ép & Sinh tố</a>
+					  		@foreach($cats as $key => $cat)
+                                            @php
+                                                $id = $cat->catalog_id;
+                                                $name = $cat->catalog_name;
+                                            @endphp
+						  <a href="{{ route('trangDanhMuc') }}" class="list-group-item">{{ $name }}</a>
+						  @endforeach
 						</div>
 					  </div>
 					</div>

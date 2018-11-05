@@ -58,5 +58,6 @@
 		</div>
 	</div>
     <script src="/templates/f2f/bootstrap/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
