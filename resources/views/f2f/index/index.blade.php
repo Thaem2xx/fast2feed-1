@@ -108,16 +108,108 @@
 	 			<p style="text-align: center;line-height: 50px">Xem thêm &nbsp;<span class="glyphicon">&#xe092;</span></p>
 	 		</div>
 	 	</a>
+	 <div id="floating-panel">
+      <strong>Start:</strong>
+      <select id="start">
+        <option value="Nguyễn Văn Huề, Liên Chiểu, Đà Nẵng">Nguyễn Văn Huề</option>
+        <option value="9 Ngô Văn Sở, Liên Chiểu, Đà Nẵng">9 Ngô Văn Sở</option>
+        <option value="Mộc Bài 8, Liên Chiểu, Đà Nẵng">Mộc Bài 8, MO</option>
+        <option value="254 Nguyễn Văn Linh, Thanh Khê, Đà Nẵng ">254 Nguyễn Văn Linh</option>
+        
+      </select>
+      <br>
+      <strong>End:</strong>
+      <select id="end">
+        <option value="Mộc Bài 8, Liên Chiểu, Đà Nẵng">Mộc Bài 8</option>
+        <option value="9 Ngô Văn Sở, Liên Chiểu, Đà Nẵng">9 Ngô Văn Sở</option>
+        <option value="Nguyễn Văn Huề, Liên Chiểu, Đà Nẵng">Nguyễn Văn Huề</option>
+        <option value="254 Nguyễn Văn Linh, Thanh Khê, Đà Nẵng ">254 Nguyễn Văn Linh</option>
+        
+      </select>
+    </div>
 	<div class="row">
-	 		<div id="mep" style="width:1169px;height:300px;"></div>
-	 	</div>
-	
+	 		<div id="map" style="width:1169.px;height:300px;z-index: 1px;position: relative;">
+	 		</div>
+	 		
+	</div>
 	<script>
-      	
+		var map;
+      function initMap() {
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var directionsService = new google.maps.DirectionsService;
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 16.0544068, lng: 108.2021667}
+        });
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('right-panel'));
+        
+        var control = document.getElementById('floating-panel');
+        control.style.display = 'block';
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var start = document.getElementById('start').value;
+        var end = document.getElementById('end').value;
+        directionsService.route({
+          origin: start,
+          destination: end,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+            var m = Math.ceil((response.routes[0].overview_path.length)/2);
+            var middle = response.routes[0].overview_path[m];
+            var service = new google.maps.DistanceMatrixService;
+            service.getDistanceMatrix({
+              origins: [start],
+              destinations: [end],
+              travelMode: 'DRIVING',
+              unitSystem: google.maps.UnitSystem.METRIC,
+              avoidHighways: false,
+              avoidTolls: false
+        }, function(response, status) {
+          if (status === 'OK') {
+            var originList = response.originAddresses;
+            var destinationList = response.destinationAddresses;
+            for (var i = 0; i < originList.length; i++) {
+              var results = response.rows[i].elements;
+              for (var j = 0; j < results.length; j++){
+                var element = results[j];
+                var dt = element.distance.text;
+                var dr = element.duration.text;
+              }
+            }
+            var i = new google.maps.InfoWindow();
+            var content = '<div>'+dt+
+            '<br>'+dr+
+            '</div>';
+            //alert(content);
+            i.setContent(content);
+            i.setPosition(middle);
+            i.open(map);
+          }
+        })
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+	</script>
+
+	<script>
+      	/*var map;
       	function initMap() {
         var myLatLng = {lat: 16.059911, lng: 108.209889};
 
-        var map = new google.maps.Map(document.getElementById('mep'), {
+        map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: myLatLng
         });
@@ -125,11 +217,14 @@
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Trường Đại Học Duy Tân'
+          title: 'Trường Đại Học Duy Tân',
         });
-      }
+
+        
+      }*/
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzmyhWaNEQ_i55-LLOfNPka-8BAhZRUaM&callback=initMap"
     async defer></script>
+
 	{{-- test --}}
 @endsection

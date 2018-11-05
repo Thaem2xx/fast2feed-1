@@ -23,7 +23,7 @@
 						  		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
+						  					<a href="#"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
 						  				</div>
 										<p><span class='price text-right'>EZI Coffee</span></p>
 										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
@@ -33,7 +33,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
+						  					<a href="#"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
 						  				</div>
 										<p><span class='price text-right'>EZI Coffee</span></p>
 										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
@@ -43,7 +43,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
+						  					<a href="#"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
 						  				</div>
 										<p><span class='price text-right'>EZI Coffee</span></p>
 										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
@@ -53,7 +53,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
+						  					<a href="#"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
 						  				</div>
 										<p><span class='price text-right'>EZI Coffee</span></p>
 										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>
@@ -63,7 +63,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 re-padding">
 						  			<div class="product_item">
 						  				<div class="product-image">
-						  					<a href="{{ route('trangNhaHang') }}"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
+						  					<a href="#"><img src="https://media.foody.vn/res/g19/184588/prof/s/foody-mobile-main-avatar-foody-ap.jpg" alt="" class=""></a>
 						  				</div>
 										<p><span class='price text-right'>EZI Coffee</span></p>
 										<p style="color: gray;font-size: 13px; border-bottom: 1px solid gray">30 Ông ích khiêm, quận Hải Ch..</p>

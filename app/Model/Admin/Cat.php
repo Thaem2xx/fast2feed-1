@@ -29,4 +29,5 @@ class Cat extends Model
     {
         return $this->where('catalog_id', $cid)->update($arItem);
     }
+    
 }
