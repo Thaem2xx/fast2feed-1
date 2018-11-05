@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/templates/f2f/bootstrap/css/bootstrap.min.js">
 	<link rel="stylesheet" type="text/css" href="/templates/f2f/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	{{-- test --}}
 	<style>
 		/*DropDown Menu*/
 		#bs-example-navbar-collapse-1 ul li > .sub-menu {
