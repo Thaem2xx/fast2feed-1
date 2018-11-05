@@ -160,19 +160,21 @@ button.order_table_status.gray {
     flex: 0 0 auto;
 }
 .order_list_row_col2{
-	width: 260px;
+    margin-right: 10px;
+	width: 240px;
     flex: 0 0 auto;
 }
 .order_list_row_col3{
-	width: 260px;
+    margin-right: 10px;
+	width: 240px;
     flex: 0 0 auto;
 }
 .order_list_row_col4{
-	width: 150px;
+	width: 140px;
     flex: 0 0 auto;
 }
 .order_list_row_col5{
-	width: 150px;
+	width: 140px;
     flex: 0 0 auto;
 }
 .order_list_row_col6{
@@ -184,7 +186,7 @@ button.order_table_status.gray {
     flex: 0 0 auto;
 }
 .order_list_row_col8{
-	width: 80px;
+	width: 110px;
     flex: 0 0 auto;
 }
 .product_inve{

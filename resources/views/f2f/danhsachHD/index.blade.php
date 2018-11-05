@@ -456,7 +456,7 @@
                             </div>
                             <div class="order_table_cell order_list_row_col8">
                                 <button title="Nhấn vào để nhận đơn hàng"
-                                        class="font_weight_bold order_table_status gray pointer">nhận
+                                        class="order_table_status gray pointer" style="width: 100px">Nhận đơn
                                 </button>
                             </div>
                         </div>
