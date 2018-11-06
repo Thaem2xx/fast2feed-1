@@ -1,0 +1,173 @@
+/*DropDown Menu*/
+#bs-example-navbar-collapse-1 ul li > .sub-menu {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+}
+#bs-example-navbar-collapse-1 ul li:hover .sub-menu {
+	display: block;
+}
+#bs-example-navbar-collapse-1 ul li {
+	position: relative;
+	list-style: none;
+	-webkit-transition: all .2s linear;
+}
+.sub-menu {
+	padding: 0px;
+	background-color: #4C66A4;
+	width: 90px;
+}
+.sub-menu li a {
+	color: white;
+	line-height: 30px;
+	padding-left: 5px;
+}
+.sub-menu li {
+	height: 30px;
+}
+.sub-menu li:hover {
+	background-color: white;
+	color: #0288D1;
+}
+.sub-menu li a:hover {
+	
+	color: #0288D1;
+}
+/*footer*/
+.app-download:hover {
+	color: #0288D1;
+	border-color: #0288D1;
+}
+.app-download {
+	-webkit-transition: all .2s linear;
+	border: 1px solid #D7D7D7;
+	width: 120px;
+	height: 40px;
+	position: relative;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+/*id active*/
+#active {
+	background-color: #DDDDDD;
+}
+/*gio hang*/
+.giohang {
+	
+	padding:5px 10px;
+	border-bottom: 1px solid #EBEBEB;
+}
+/*dat-truoc*/
+.dat-truoc {
+	width: 248px;
+	height: 35px;
+	border: 1px solid gray;
+	background-color: #CF2127;
+	border-radius: 4px;
+}
+.dat-truoc:hover {
+	background-color: #BB0000;
+}
+/*danh sách sản phẩm*/
+.item {
+	margin-top: 30px;
+}
+.list-item {
+	border-bottom: 1px solid #F5F5F5;
+	margin-top: 10px;
+}
+.item-cat {
+	margin-bottom: 30px;
+}
+.item-cat h4 {
+	color: #6D6F79;
+}
+.img-item {
+	float: left;
+}
+.img-item img {
+	width: 60px;
+	height: 60px;
+}
+.name-item {
+	float: left;
+	margin-left: 20px
+}
+.name-item p {
+	color: #6D6F79;
+	font-size: 12px;
+}
+.price-item {
+	float: right;
+}
+.price-item span {
+	margin-right: 20px;
+	color: #0296DD;
+	font-weight: 700;
+	font-size: 17px;
+}
+/*clear float*/
+.clear {
+	clear:both;
+}
+/*mã giảm giá*/
+.discount {
+	width: 569px;
+	height: 100%;
+	border: 1px dashed #575757;
+	background-color: #FBF9D8;
+}
+.code-discount-img img {
+	display: block;
+	padding: 15px;
+}
+.code-discount-img {
+	float: left;
+
+}
+.code-discount-text {
+	padding:10px 90px;
+}
+.code-discount-text div p {
+	line-height: 10px;
+}
+.discount-text1 {
+	border-bottom: 1px solid #EBE9C9;
+}
+.discount-text2 {
+	margin-top: 10px;
+}
+/*star-rate*/
+.star-rate {
+	display: inline;
+	color: #FFC107;
+}
+/*thông báo shipper*/
+.dsHoadon-head {
+	border-bottom: 1px solid gray;
+	margin-bottom: 2px;
+	color: red;
+	height: 40px;
+	font-size: 17px;
+}
+.dsHoadon-head span {
+	padding-left: 30px;
+
+}
+.dsHoadon-body i {
+	float: left;
+}
+.dsHoadon-body-content p {
+	color: #555555;	
+}
+.dsHoadon-body-content p span{
+	color: #9C999F;	
+}
+.dsHoadon-body {
+	height: 45px;
+
+}
+.dsHoadon-body:hover {
+	background-color: #F0F0F0;
+}
+

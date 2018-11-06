@@ -37,6 +37,10 @@ Route::namespace('f2f')->group(function(){
 		'uses' => 'RestauController@index',
 		'as' => 'trangCustomer'
 	]);
+	Route::get('/postProduct',[
+		'uses' => 'PostProductController@index',
+		'as' => 'trangpostProduct'
+	]);
 	Route::get('/index-shipper',[
 		'uses' => 'ShipperController@index',
 		'as' => 'trangShipper'

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Admin\Cat;
 
-class ContactController extends Controller
+class PostProductController extends Controller
 {
 	public function __construct(Cat $cat)
 	{
@@ -15,6 +15,7 @@ class ContactController extends Controller
     public function index()
     {
     	$cats = $this->cat->getAll();
-    	return view('f2f.contact.index', compact('cats'));
+
+    	return view('f2f.restau.postProduct', compact('cats'));
     }
 }

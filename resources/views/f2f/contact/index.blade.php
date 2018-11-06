@@ -1,6 +1,6 @@
 @extends('templates.f2f.master')
 @section('title')
-	Trang chủ
+	Liên hệ
 @endsection
 @section('content')
 <div class="row">

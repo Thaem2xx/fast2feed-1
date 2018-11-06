@@ -9,154 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="/templates/f2f/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/templates/f2f/bootstrap/css/bootstrap.min.js">
 	<link rel="stylesheet" type="text/css" href="/templates/f2f/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/templates/f2f/css/style2.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	{{-- test --}}
-	<style>
-		/*DropDown Menu*/
-		#bs-example-navbar-collapse-1 ul li > .sub-menu {
-			display: none;
-			position: absolute;
-			z-index: 1000;
-		}
-		#bs-example-navbar-collapse-1 ul li:hover .sub-menu {
-			display: block;
-		}
-		#bs-example-navbar-collapse-1 ul li {
-			position: relative;
-			list-style: none;
-			-webkit-transition: all .2s linear;
-		}
-		.sub-menu {
-			padding: 0px;
-			background-color: #4C66A4;
-			width: 90px;
-		}
-		.sub-menu li a {
-			color: white;
-			line-height: 30px;
-			padding-left: 5px;
-		}
-		.sub-menu li {
-			height: 30px;
-		}
-		.sub-menu li:hover {
-			background-color: white;
-			color: #0288D1;
-		}
-		.sub-menu li a:hover {
-			
-			color: #0288D1;
-		}
-		/*footer*/
-		.app-download:hover {
-			color: #0288D1;
-			border-color: #0288D1;
-		}
-		.app-download {
-			-webkit-transition: all .2s linear;
-			border: 1px solid #D7D7D7;
-			width: 120px;
-			height: 40px;
-			position: relative;
-			margin-bottom: 15px;
-			margin-top: 15px;
-		}
-		/*id active*/
-		#active {
-			background-color: #DDDDDD;
-		}
-		/*gio hang*/
-		.giohang {
-			
-			padding:5px 10px;
-			border-bottom: 1px solid #EBEBEB;
-		}
-		/*dat-truoc*/
-		.dat-truoc {
-			width: 248px;
-			height: 35px;
-			border: 1px solid gray;
-			background-color: #CF2127;
-			border-radius: 4px;
-		}
-		.dat-truoc:hover {
-			background-color: #BB0000;
-		}
-		/*danh sách sản phẩm*/
-		.item {
-			margin-top: 30px;
-		}
-		.list-item {
-			border-bottom: 1px solid #F5F5F5;
-			margin-top: 10px;
-		}
-		.item-cat {
-			margin-bottom: 30px;
-		}
-		.item-cat h4 {
-			color: #6D6F79;
-		}
-		.img-item {
-			float: left;
-		}
-		.img-item img {
-			width: 60px;
-			height: 60px;
-		}
-		.name-item {
-			float: left;
-			margin-left: 20px
-		}
-		.name-item p {
-			color: #6D6F79;
-			font-size: 12px;
-		}
-		.price-item {
-			float: right;
-		}
-		.price-item span {
-			margin-right: 20px;
-			color: #0296DD;
-			font-weight: 700;
-			font-size: 17px;
-		}
-		/*clear float*/
-		.clear {
-			clear:both;
-		}
-		/*mã giảm giá*/
-		.discount {
-			width: 569px;
-			height: 100%;
-			border: 1px dashed #575757;
-			background-color: #FBF9D8;
-		}
-		.code-discount-img img {
-			display: block;
-			padding: 15px;
-		}
-		.code-discount-img {
-			float: left;
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-		}
-		.code-discount-text {
-			padding:10px 90px;
-		}
-		.code-discount-text div p {
-			line-height: 10px;
-		}
-		.discount-text1 {
-			border-bottom: 1px solid #EBE9C9;
-		}
-		.discount-text2 {
-			margin-top: 10px;
-		}
-		/*star-rate*/
-		.star-rate {
-			display: inline;
-			color: #FFC107;
-		}
-	</style>
 </head>
 <body>
 	<div class="container">
@@ -186,13 +42,92 @@
 			        <li><a href="{{ route('trangShipper') }}">Hóa đơn đã nhận</a></li>
 					<li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-bell"><span class="badge">1</span></span><span class="caret"></span></a>
-			          <ul class="dropdown-menu" style="width: 350px;">
-			            <div class="table-responsive">
-		                     <p style="font-size:15.5px">Hiện bạn đang có 1 hóa đơn gần khu vực của bạn</p>
-		                     <a href="#" type="button" class="btn btn-danger pull-right"> Chi Tiết Hóa Đơn </a>
+			          <ul class="dropdown-menu" style="width: 250px;">
+			            <div class="table-responsive" style="width: 250px">
+		                     <div class="dsHoadon-head">
+		                     	<span>Bạn có 2 thông báo mới</span>
+		                     </div>
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background-color: white;font-size: 15px;border:none;width: 248px;">
+								<div class="dsHoadon-body">
+		                     		<i class="material-icons" style="font-size:36px;color: #00AD5F">sms</i>
+									<div class="dsHoadon-body-content">
+										<p>
+											Có 1 hóa hóa đơn gần bạn <br>
+											<span>10/04/2018 07:39</span>
+										</p>
+									</div>
+								</div>
+							</button>
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background-color: white;font-size: 15px;border:none;width: 248px;">
+								<div class="dsHoadon-body">
+		                     		<i class="material-icons" style="font-size:36px;color: #00AD5F">sms</i>
+									<div class="dsHoadon-body-content">
+										<p>
+											Có 1 hóa hóa đơn gần bạn <br>
+											<span>10/04/2018 07:39</span>
+										</p>
+									</div>
+								</div>
+							</button>
+		                     
 		                  </div>
 			          </ul>
 			        </li>
+			        <!-- Modal thông báo order -->
+					  <div class="modal fade" id="myModal" role="dialog">
+					    <div class="modal-dialog">
+					    
+					      <!-- Modal content-->
+					      <div class="modal-content" style="width: 175%;right:226px;">
+					        <div class="order_list">
+				               <div class="order_list_heading order_table_row">
+				                  <div class="order_table_cell order_list_row_col1">STT
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col2">Nơi nhận hàng
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col3">Nơi giao hàng
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col4">Tiền nhận hàng
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col5">Tiền giao hàng
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col6">Trạng thái
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col7">
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col8">
+				                  </div>
+				               </div>
+				               <div class="order_table_row">
+				                  <div class="order_table_cell order_list_row_col1">01
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col2">134 Hoàng Diệu, P.2, Q. Hải Châu, TP.Đà
+				                     Nẵng
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col3">148 Tiểu La, P.3, Q. Hải Châu, TP.Đà Nẵng
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col4">95.000đ
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col5">116,000đ
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col6">Còn 5 phút
+				                  </div>
+				                  <div class="order_table_cell order_list_row_col7">
+				                     <button title="Nhấn vào để xem chi tiết" class="font_weight_bold order_table_status gray pointer" id="myBtn">Xem
+				                     </button>
+				                     
+				                  <div class="order_table_cell order_list_row_col8">
+				                     <button title="Nhấn vào để nhận đơn hàng" class="order_table_status gray pointer" style="width: 100px">Nhận đơn
+				                     </button>
+				                  </div>
+				               </div>
+				               
+				            </div>
+					      </div>
+					      
+					    </div>
+					  </div>
+					  {{-- end modal --}}
 			        <li>
 			        	<a href="#">...</a>
 			        	<ul class="sub-menu">
@@ -231,6 +166,7 @@
 		                  </div>
 			          </ul>
 			        </li>
+			        <li><a href="{{ route('trangpostProduct') }}">Đăng sản phẩm</a></li>
 			        <li><a href="{{ route('trangDangNhap') }}">Đăng nhập</a></li>
 			        <li><a href="{{ route('trangDangKiShipper') }}">Trở thành shipper</a></li>
 			      </ul>
